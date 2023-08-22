@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:antiquewhite;">
+    
+    <div class="call" style="border: 1PX solid black; width: 300px; height: 200px;  position: relative;left: 150px; top:150px">
+        <center><h1 style="color: red;">CALCULATOR</h1>
+            <hr>
+    <input type="number" id="num1" placeholder="First Number">
+    <br>
+    <br>
+    <input type="number" id="num2" placeholder="Second Number">
+    <br>
+    <br>
+    <button onclick="cal()">SOLUTION</button>
+    <button type="reset">RESET</button>
+</div>
+    <div style="border: 1px solid black; width: 300px; height: 200px;  position: relative;left: 150px; top:150px;">
+    <h2>Solution:</h2>    
+    <p id="res"></p>
+    <p id="resl"></p>
+    <p id="reslt"></p>
+    <p id="resu"></p>
+    </center>
+    </div>
+    <script>
+        function cal(){
+            var a =parseInt(document.getElementById('num1').value);
+            var b =parseInt(document.getElementById('num2').value);
+            var c =a*b;
+            var d =a/b;
+            var e =a+b;
+            var f =a-b;
+            document.getElementById('res').innerHTML="MULTIPLY Result is "+c;
+            document.getElementById('resl').innerHTML=" DIVIDE Result is "+d;
+            document.getElementById('reslt').innerHTML=" ADD Result is "+e;
+            document.getElementById('resu').innerHTML=" SUB Result is "+f;
+        }
+    </script>
+    <style>
+        #res,#resl,#reslt,#resu{
+            color: blue;
+        }
+        button{
+            background-color: gold;
+        }
+        input{
+            background-color:burlywood;
+        }
+    </style>
+</body>
+</html>
